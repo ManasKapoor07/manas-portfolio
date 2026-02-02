@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Manas Kapoor - Software Engineer",
-  description: "Software Engineer specializing in building scalable and performant frontends with React and Next.js.",
+  description:
+    "Full-stack Software Engineer with hands-on experience in Java, Spring Boot, and React.",
 };
 
 export default function RootLayout({
