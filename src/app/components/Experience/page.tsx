@@ -1,99 +1,75 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  Briefcase,
+  Calendar,
+  MapPin,
+  Database,
+  ShieldCheck,
+  Zap,
+  BarChart3,
+  Globe,
+} from "lucide-react";
 
 const experiences = [
   {
     company: "Datopic Technologies",
     role: "Software Engineer",
     duration: "Feb 2024 – Present",
-    location: "Noida, Uttar Pradesh",
+    location: "Noida, UP",
     summary:
-      "Worked on multiple production-grade monitoring and analytics systems, focusing on scalable frontend architecture, real-time data visualization, and performance-critical UI.",
+      "Designing and delivering production-grade frontend systems and secure backend architectures for 1,000+ daily active users.",
     systems: [
       {
-        title: "CRM Platform",
-        description: (
-          <>
-            Built and maintained core frontend modules using{" "}
-            <span className="text-teal-600 font-medium">React</span>,{" "}
-            <span className="text-teal-600 font-medium">Next.js</span> and{" "}
-            <span className="text-teal-600 font-medium">Redux</span>, focusing
-            on reusable components, predictable state management, and consistent
-            UX across the application.
-          </>
-        ),
-        tech: ["React", "Next.js", "Tailwind CSS", "Redux"],
-        impact:
-          "Improved feature delivery speed by ~20% through reusable UI patterns.",
+        title: "CRM & Core Modules",
+        icon: <Globe size={20} className="text-blue-400" />,
+        description:
+          "Built dashboards and filters using React.js/Redux, reducing feature development turnaround by 20%.",
+        tech: ["React", "Redux", "Jira"],
+        impact: "Reduced dev time by 20%",
       },
       {
-        title: "AWS Monitoring Dashboard",
-        description: (
-          <>
-            Developed a real-time dashboard to visualize{" "}
-            <span className="text-teal-600 font-medium">AWS</span>{" "}
-            infrastructure metrics by integrating frontend components with{" "}
-            <span className="text-teal-600 font-medium">
-              Express-based APIs
-            </span>
-            .
-          </>
-        ),
-        tech: ["React", "Express.js", "AWS APIs"],
-        impact:
-          "Enabled real-time visibility into cloud infrastructure health.",
+        title: "Blockchain Pipelines",
+        icon: <Zap size={20} className="text-yellow-400" />,
+        description:
+          "Processed 10,000+ daily transactions with WebSockets, reducing manual review effort by 30%.",
+        tech: ["WebSockets", "Real-time Data"],
+        impact: "30% less manual effort",
       },
       {
-        title: "Blockchain Monitoring System",
-        description: (
-          <>
-            Worked on a blockchain monitoring solution to track{" "}
-            <span className="text-teal-600 font-medium">on-chain activity</span>
-            , security signals, and anomalous behavior while handling
-            high-frequency UI updates.
-          </>
-        ),
-        tech: ["React", "WebSockets", "APIs"],
-        impact: "Improved observability of blockchain transactions and events.",
+        title: "Security & Auth",
+        icon: <ShieldCheck size={20} className="text-emerald-400" />,
+        description:
+          "Implemented Spring Security reducing unauthorized access incidents to zero.",
+        tech: ["Java","Spring Security"],
+        impact: "Zero security incidents",
       },
       {
-        title: "Quantum Attack Monitoring Software",
-        description: (
-          <>
-            Contributed to a security-focused monitoring platform aimed at
-            visualizing early indicators of{" "}
-            <span className="text-teal-600 font-medium">
-              quantum-era cryptographic threats
-            </span>
-            .
-          </>
-        ),
-        tech: ["React", "Data Visualization", "Security Dashboards"],
-        impact: "Provided early visibility into cryptographic risk indicators.",
+        title: "Database Optimization",
+        icon: <Database size={20} className="text-purple-400" />,
+        description:
+          "Integrated JPA/MySQL for audit trails, reducing query response times by 25% via optimized indexing.",
+        tech: ["JPA", "MySQL", "Hibernate" , "MongoDB"],
+        impact: "25% faster queries",
       },
     ],
   },
   {
     company: "Celebal Technologies",
     role: "React.js Trainee",
-    duration: "Jun 2023 – Aug 2023",
+    duration: "June 2023 – Aug 2023",
     location: "Remote",
     summary:
-      "Focused on strengthening frontend fundamentals through hands-on React projects and real-world API integrations.",
+      "Focused on interactive frontend features and API-driven dynamic UI rendering.",
     systems: [
       {
-        title: "Netflix-Style Streaming App",
-        description: (
-          <>
-            Developed a Netflix-style application using the{" "}
-            <span className="text-teal-600 font-medium">TMDB API</span>,
-            focusing on component-based architecture, responsive layouts, and
-            API-driven UI rendering.
-          </>
-        ),
+        title: "Streaming Platform",
+        icon: <BarChart3 size={20} className="text-rose-400" />,
+        description:
+          "Developed a Netflix-style application integrating TMDB API for real-time data fetching.",
         tech: ["React", "Redux", "TMDB API"],
-        impact: "Strengthened fundamentals of scalable frontend development.",
+        impact: "Dynamic UI Rendering",
       },
     ],
   },
@@ -101,102 +77,120 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section
-      id="experience"
-      className="relative px-4 sm:px-6 md:px-10 py-24 bg-gradient-to-b from-white via-slate-50 to-white"
-    >
-      <div className="max-w-7xl mx-auto space-y-16 md:space-y-20">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl"
-        >
-          <p className="text-sm font-medium text-teal-600 mb-3">Experience</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
-            Professional{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500">
-              experience
-            </span>
+    <section id="experience" className="relative py-24 bg-[#05070a] px-6">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="mb-20">
+          <h2 className="text-sm font-mono text-blue-500 uppercase tracking-[0.3em] mb-4">
+            Professional History
           </h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+            Work <span className="text-blue-500">Experience.</span>
+          </h3>
+        </div>
 
-          <p className="mt-4 text-slate-600">
-            Production systems and internal platforms I’ve helped design, build,
-            and scale in real-world environments.
-          </p>
-        </motion.div>
+        <div className="space-y-32">
+          {experiences.map((exp, idx) => (
+            <div key={exp.company} className="relative">
+              {/* Timeline Line */}
+              {idx !== experiences.length - 1 && (
+                <div className="absolute left-0 top-10 bottom-[-8rem] w-px bg-gradient-to-b from-blue-500/50 to-transparent hidden lg:block" />
+              )}
 
-        {/* Experience Blocks */}
-        {experiences.map((exp, idx) => (
-          <motion.div
-            key={exp.company}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="space-y-10 md:space-y-12"
-          >
-            {/* Company Meta */}
-            <div className="max-w-3xl">
-              <h3 className="text-xl sm:text-2xl font-semibold text-slate-900">
-                {exp.role}
-              </h3>
-              <p className="text-sm text-slate-600 mt-1">
-                <span className="font-medium text-slate-800">
-                  {exp.company}
-                </span>{" "}
-                · {exp.duration} · {exp.location}
-              </p>
-              <p className="mt-4 text-slate-700">{exp.summary}</p>
-            </div>
-
-            {/* Systems Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-              {exp.systems.map((sys) => (
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                {/* Left: Company Info */}
                 <motion.div
-                  key={sys.title}
-                  whileHover={{ y: -4 }}
-                  transition={{ duration: 0.25 }}
-                  className="relative rounded-2xl bg-white/70 backdrop-blur-md p-5 sm:p-6 md:p-7 shadow-sm"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="lg:col-span-4"
                 >
-                  {/* Accent */}
-                  <span className="absolute left-0 top-5 bottom-5 w-0.5 bg-gradient-to-b from-teal-500 to-blue-500 rounded-full" />
+                  <div className="sticky top-32">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="p-3 rounded-2xl bg-blue-600/10 border border-blue-500/20 text-blue-400">
+                        <Briefcase size={24} />
+                      </div>
+                      <div>
+                        <h4 className="text-2xl font-bold text-white leading-none">
+                          {exp.company}
+                        </h4>
+                        <p className="text-blue-500 font-mono text-sm mt-2">
+                          {exp.role}
+                        </p>
+                      </div>
+                    </div>
 
-                  <h4 className="text-base sm:text-lg font-semibold text-slate-900 mb-3">
-                    <span className="text-teal-600">
-                      {sys.title.split(" ")[0]}
-                    </span>{" "}
-                    {sys.title.split(" ").slice(1).join(" ")}
-                  </h4>
+                    <div className="space-y-3 text-slate-400 text-sm mb-6">
+                      <div className="flex items-center gap-2">
+                        <Calendar size={14} className="text-slate-500" />
+                        <span>{exp.duration}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin size={14} className="text-slate-500" />
+                        <span>{exp.location}</span>
+                      </div>
+                    </div>
 
-                  <p className="text-sm text-slate-700 leading-relaxed mb-4">
-                    {sys.description}
-                  </p>
-
-                  {/* Tech */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {sys.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs bg-slate-50 px-2.5 py-1 rounded-md text-slate-600"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                    <p className="text-slate-400 leading-relaxed border-l-2 border-white/5 pl-4 italic">
+                      {exp.summary}
+                    </p>
                   </div>
-
-                  {/* Impact */}
-                  <p className="text-sm border-l-2 border-teal-500 pl-3">
-                    <span className="font-medium text-slate-900">Impact:</span>{" "}
-                    <span className="text-slate-600">{sys.impact}</span>
-                  </p>
                 </motion.div>
-              ))}
+
+                {/* Right: Systems Bento Grid */}
+                <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {exp.systems.map((sys, sysIdx) => (
+                    <motion.div
+                      key={sys.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: sysIdx * 0.1 }}
+                      whileHover={{ scale: 1.02 }}
+                      className="group p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:bg-white/[0.07] transition-all relative overflow-hidden"
+                    >
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="p-2.5 rounded-xl bg-black/40 border border-white/10 group-hover:border-blue-500/30 transition-colors">
+                          {sys.icon}
+                        </div>
+                        <div className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-mono font-bold text-blue-400 uppercase tracking-widest">
+                          Production
+                        </div>
+                      </div>
+
+                      <h5 className="text-lg font-bold text-white mb-2">
+                        {sys.title}
+                      </h5>
+                      <p className="text-sm text-slate-400 leading-relaxed mb-6">
+                        {sys.description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {sys.tech.map((t) => (
+                          <span
+                            key={t}
+                            className="text-[10px] font-mono bg-white/5 px-2 py-1 rounded text-slate-300 border border-white/5"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="pt-4 border-t border-white/5 flex items-center justify-between">
+                        <span className="text-[11px] font-bold text-slate-500 uppercase tracking-tighter">
+                          Impact
+                        </span>
+                        <span className="text-[11px] font-mono text-blue-400 font-bold">
+                          {sys.impact}
+                        </span>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
             </div>
-          </motion.div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

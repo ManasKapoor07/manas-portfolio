@@ -1,207 +1,212 @@
 "use client";
 
+import { motion } from "framer-motion";
+import {
+  ExternalLink,
+  Terminal,
+  Box,
+  Layers,
+  Zap,
+  ShoppingCart,
+  Car,
+  CloudSun,
+  Layout,
+  Github,
+} from "lucide-react";
+
 const projects = [
   {
-    title: "Used-Car Lead Management Platform",
+    title: "Enterprise E-Commerce Platform",
+    category: "Full Stack / Enterprise",
     description:
-      "A production website built for a real family-run car dealership, enabling users to submit car-selling requests with vehicle details and images.",
-    highlights: [
-      "Custom car-selling form capturing vehicle details and photos",
-      "Backend API built to handle submissions and image uploads",
-      "Leads delivered directly to business owners for follow-up",
-      "Actively used in a real business environment",
-    ],
-    tech: ["React", "Tailwind CSS", "Node.js", "Express", "Image Uploads"],
-    impact:
-      "Digitized the lead intake process, replacing manual WhatsApp inquiries with structured submissions.",
+      "A comprehensive e-commerce system with a layered Spring Boot architecture, handling product catalogs, cart management, and secure checkouts.",
+    tech: ["Java", "Spring Boot", "React", "MySQL", "JPA"],
+    impact: "Supports 1,000+ products with optimized JPA indexing.",
+    icon: <ShoppingCart className="text-blue-400" size={22} />,
+    status: "Production",
+    liveLink: undefined,
+    github: {
+      frontend: "https://github.com/ManasKapoor07/car-accessories-landing",
+      backend: "https://github.com/ManasKapoor07/carVatika",
+    },
+  },
+  {
+    title: "Used-Car Lead Management",
+    category: "Full Stack / Production System",
+    description:
+      "A real-world dealership platform that digitized the lead intake process, replacing manual WhatsApp workflows with structured data capture.",
+    tech: ["Java", "React","Spring Boot" ],
+    impact: "100% digital lead capture for car-selling requests.",
+    icon: <Car className="text-emerald-400" size={22} />,
+    status: "Live",
     liveLink: "https://www.maabhawanicarbazar.com/",
   },
   {
-    title: "Business Website for Sanitaryware Brand",
-    status: "WIP",
+    title: "AI Article Summarizer",
+    category: "AI / Frontend",
     description:
-      "A freelance client project for a sanitaryware and hardware business, focused on building a modern, responsive website aligned with real business requirements.",
-    highlights: [
-      "Freelance project built for a real business client",
-      "Modern UI with structured sections and clear navigation",
-      "Responsive layout optimized for desktop and mobile",
-      "Iterative development based on client feedback",
-    ],
-    tech: ["React", "Next.js", "Tailwind CSS"],
-    impact:
-      "Demonstrates client-facing development, requirement understanding, and iterative UI delivery.",
-    liveLink: "https://m-co-qj1f.vercel.app/",
-  },
-  {
-    title: "AI Article Summarizer (GPT-4)",
-    description:
-      "A frontend-focused web application that generates concise, context-aware summaries of long-form articles using OpenAI’s GPT-4 API.",
-    highlights: [
-      "Async summarization using GPT-4 API",
-      "Redux-based request lifecycle handling",
-      "UI optimized for readability and fast feedback",
-    ],
-    tech: ["React", "Redux", "Tailwind CSS", "OpenAI API"],
-    impact: "Reduced reading time for users consuming long-form content.",
+      "High-performance summarization tool utilizing GPT-4. Features Redux-based request lifecycle management for seamless user feedback.",
+    tech: ["GPT-4 API", "React", "Redux Toolkit"],
+    impact: "Drastically reduced reading time for long-form content.",
+    icon: <Zap className="text-yellow-400" size={22} />,
+    status: "Live",
     liveLink: "https://lighthearted-maamoul-73995f.netlify.app/",
   },
   {
-    title: "Kanban-Style Task Manager",
-    status: "WIP",
+    title: "Sanitaryware Brand Platform",
+    category: "Freelance Client",
     description:
-      "A feature-rich task management application focused on complex frontend state handling, interaction-heavy UI, and authenticated CRUD workflows.",
-    highlights: [
-      "Drag-and-drop task management with board and list layouts",
-      "Firebase authentication with sign-in and sign-out flows",
-      "Full CRUD operations with real-time UI updates",
-      "File uploads attached to tasks",
-    ],
-    tech: [
-      "React",
-      "Firebase Auth",
-      "Firestore",
-      "Drag & Drop",
-      "Tailwind CSS",
-    ],
-    impact:
-      "Demonstrates handling of complex UI state, interactions, and authenticated workflows.",
+      "Modern, high-conversion business website built with Next.js, focusing on performance, SEO, and responsive architectural detail.",
+    tech: ["React.js", "Redux", "Tailwind CSS", "Framer Motion"],
+    impact: "Modernized digital presence for hardware distribution.",
+    icon: <Layout className="text-purple-400" size={22} />,
+    status: "WIP",
+    liveLink: "https://m-co-qj1f.vercel.app/",
+  },
+  {
+    title: "Kanban Task Manager",
+    category: "Productivity Tool",
+    description:
+      "Complex state-driven application with drag-and-drop mechanics and Firebase authentication for secure task tracking.",
+    tech: ["Firebase Auth", "Firestore", "React-DnD"],
+    impact: "Real-time sync across devices with CRUD persistence.",
+    icon: <Layers className="text-orange-400" size={22} />,
+    status: "WIP",
     liveLink: "https://illustrious-kelpie-eea3b8.netlify.app/",
   },
   {
-    title: "Interactive Weather Dashboard",
+    title: "Weather Intelligence Dashboard",
+    category: "Data Visualization",
     description:
-      "A responsive weather dashboard application that fetches and visualizes real-time and forecast weather data using a public weather API.",
-    highlights: [
-      "External weather API integration for live and forecast data",
-      "Search-based city lookup with dynamic UI updates",
-      "Dashboard-style layout with key weather metrics",
-    ],
-    tech: ["React", "Weather API", "Tailwind CSS"],
-    impact:
-      "Demonstrates real-world API integration and data-driven UI rendering.",
+      "Real-time weather monitoring system that fetches and visualizes multi-metric forecast data from global APIs.",
+    tech: ["OpenWeather API", "React", "Charts.js"],
+    impact: "Data-driven UI rendering with dynamic city lookup.",
+    icon: <CloudSun className="text-cyan-400" size={22} />,
+    status: "Live",
     liveLink: "https://tangerine-youtiao-d6677d.netlify.app/",
-  },
-  {
-    title: "Brainwave UI Landing Page",
-    description:
-      "A visually polished, responsive landing page focused on layout structure, typography, spacing, and modern UI composition.",
-    highlights: [
-      "Component-based layout using Tailwind CSS",
-      "Strong visual hierarchy and spacing system",
-      "Fully responsive across screen sizes",
-    ],
-    tech: ["React", "Tailwind CSS"],
-    impact:
-      "Demonstrates frontend UI craftsmanship and attention to visual detail.",
-    liveLink: "https://brainwave-page.netlify.app/",
   },
 ];
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="relative bg-gradient-to-b from-white via-slate-50 to-white
-                 px-4 sm:px-6 lg:px-10 py-10 sm:py-24 lg:py-2"
-    >
-      <div className="max-w-7xl mx-auto space-y-10 ">
+    <section id="projects" className="relative py-24 bg-[#05070a] px-6">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="max-w-3xl">
-          <p className="text-sm font-medium text-teal-600 mb-2">Projects</p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
-            Things I’ve{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500">
-              built
+        <div className="mb-16">
+          <div className="flex items-center gap-2 mb-4">
+            <Terminal size={18} className="text-blue-500" />
+            <span className="text-sm font-mono text-blue-500 uppercase tracking-[0.3em]">
+              Deployments
             </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            Featured <span className="text-blue-500">Projects.</span>
           </h2>
-          {/* <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-600">
-            A mix of production, freelance, and learning projects that showcase
-            frontend depth, real-world integration, and system thinking.
-          </p> */}
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
-          {projects.map((project) => (
-            <div
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, idx) => (
+            <motion.div
               key={project.title}
-              className="group relative rounded-2xl bg-white/70 backdrop-blur-md
-                         p-5 sm:p-6 lg:p-7 shadow-sm
-                         transition-transform duration-300 ease-out
-                         hover:-translate-y-1"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="group relative flex flex-col bg-white/5 border border-white/10 rounded-3xl p-6 hover:border-blue-500/50 transition-all overflow-hidden"
             >
-              {/* Accent */}
-              <span
-                className="absolute left-0 top-5 bottom-5 w-0.5
-                               bg-gradient-to-b from-teal-500 to-blue-500 rounded-full"
-              />
-
-              {/* Title */}
-              <div className="flex items-start justify-between gap-3 mb-3">
-                <div className="flex flex-wrap items-center gap-2">
-                  <h3
-                    className="text-lg sm:text-xl font-semibold text-slate-900
-                                 transition-colors group-hover:text-teal-600"
-                  >
-                    {project.title}
-                  </h3>
-                  {project.status === "WIP" && (
-                    <span
-                      className="text-xs px-2 py-0.5 rounded-full
-                                     bg-slate-100 text-slate-600"
-                    >
-                      Work in progress
-                    </span>
-                  )}
+              {/* Icon & Status */}
+              <div className="flex items-start justify-between mb-8">
+                <div className="p-3 rounded-2xl bg-black/40 border border-white/10">
+                  {project.icon}
                 </div>
-
-                {project.liveLink && (
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-slate-500 hover:text-teal-600 transition
-                               opacity-100 md:opacity-0 md:group-hover:opacity-100"
-                  >
-                    Live →
-                  </a>
-                )}
+                <span
+                  className={`text-[10px] font-mono font-bold px-2 py-1 rounded-full border ${
+                    project.status === "WIP"
+                      ? "text-yellow-500 border-yellow-500/20 bg-yellow-500/5"
+                      : "text-blue-400 border-blue-400/20 bg-blue-400/5"
+                  }`}
+                >
+                  {project.status}
+                </span>
               </div>
 
-              {/* Description */}
-              <p className="text-sm text-slate-700 leading-relaxed mb-4">
-                {project.description}
-              </p>
-
-              {/* Highlights */}
-              <ul className="space-y-2 mb-4 text-sm text-slate-600">
-                {project.highlights.map((h) => (
-                  <li key={h} className="flex gap-2">
-                    <span className="mt-2 h-1 w-1 rounded-full bg-slate-400" />
-                    {h}
-                  </li>
-                ))}
-              </ul>
+              {/* Content */}
+              <div className="flex-grow">
+                <span className="text-[10px] font-mono text-blue-500 uppercase tracking-widest mb-2 block">
+                  {project.category}
+                </span>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-slate-400 mb-6">
+                  {project.description}
+                </p>
+              </div>
 
               {/* Tech */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((t) => (
                   <span
                     key={t}
-                    className="text-xs bg-slate-50 px-2.5 py-1 rounded-md
-                               text-slate-600"
+                    className="text-[10px] font-mono bg-white/5 px-2 py-1 rounded text-slate-300 border border-white/5"
                   >
                     {t}
                   </span>
                 ))}
               </div>
 
-              {/* Impact */}
-              <p className="text-sm border-l-2 border-teal-500 pl-3">
-                <span className="font-medium text-slate-900">Impact:</span>{" "}
-                <span className="text-slate-600">{project.impact}</span>
-              </p>
-            </div>
+              {/* Footer */}
+              <div className="pt-5 border-t border-white/5 flex items-center justify-between mt-auto">
+                <div className="flex items-center gap-2">
+                  <Box size={14} className="text-slate-500" />
+                  <span className="text-[11px] font-mono text-slate-500">
+                    {project.impact}
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  {project.github?.frontend && (
+                    <a
+                      href={project.github.frontend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative z-10 p-2 rounded-full bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition"
+                      title="Frontend Repository"
+                    >
+                      <Github size={16} />
+                    </a>
+                  )}
+
+                  {project.github?.backend && (
+                    <a
+                      href={project.github.backend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative z-10 p-2 rounded-full bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition"
+                      title="Backend Repository"
+                    >
+                      <Github size={16} />
+                    </a>
+                  )}
+
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative z-10 p-2 rounded-full bg-blue-600/10 text-blue-400 hover:bg-blue-600 hover:text-white transition"
+                      title="Live Project"
+                    >
+                      <ExternalLink size={16} />
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              {/* Glow */}
+              <div className="pointer-events-none absolute -bottom-24 -right-24 w-48 h-48 bg-blue-500/10 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity" />
+            </motion.div>
           ))}
         </div>
       </div>
