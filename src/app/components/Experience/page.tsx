@@ -19,41 +19,41 @@ const experiences = [
     duration: "Feb 2024 – Present",
     location: "Noida, UP",
     summary:
-      "Designing and delivering production-grade frontend systems and secure backend architectures for 1,000+ daily active users.",
-    systems: [
-      {
-        title: "CRM & Core Modules",
-        icon: <Globe size={20} className="text-blue-400" />,
-        description:
-          "Built dashboards and filters using React.js/Redux, reducing feature development turnaround by 20%.",
-        tech: ["React", "Redux", "Jira"],
-        impact: "Reduced dev time by 20%",
-      },
-      {
-        title: "Blockchain Pipelines",
-        icon: <Zap size={20} className="text-yellow-400" />,
-        description:
-          "Processed 10,000+ daily transactions with WebSockets, reducing manual review effort by 30%.",
-        tech: ["WebSockets", "Real-time Data"],
-        impact: "30% less manual effort",
-      },
-      {
-        title: "Security & Auth",
-        icon: <ShieldCheck size={20} className="text-emerald-400" />,
-        description:
-          "Implemented Spring Security reducing unauthorized access incidents to zero.",
-        tech: ["Java","Spring Security"],
-        impact: "Zero security incidents",
-      },
-      {
-        title: "Database Optimization",
-        icon: <Database size={20} className="text-purple-400" />,
-        description:
-          "Integrated JPA/MySQL for audit trails, reducing query response times by 25% via optimized indexing.",
-        tech: ["JPA", "MySQL", "Hibernate" , "MongoDB"],
-        impact: "25% faster queries",
-      },
-    ],
+      "Building full-stack monitoring and CRM platforms using React, Node.js, and MySQL for 1,000+ daily active users.",
+       systems: [
+        {
+          title: "CRM & Core Modules",
+          icon: <Globe size={20} className="text-blue-400" />,
+          description:
+            "Built dashboards, filters, and data tables using React.js and Redux, reducing feature delivery time by 20%.",
+          tech: ["React", "Redux", "REST APIs"],
+          impact: "20% faster delivery",
+        },
+        {
+          title: "Transaction Monitoring",
+          icon: <Zap size={20} className="text-yellow-400" />,
+          description:
+            "Processed 10,000+ daily transactions using WebSockets and optimized APIs for real-time monitoring.",
+          tech: ["WebSockets", "Node.js", "Express"],
+          impact: "10K+ daily events",
+        },
+        {
+          title: "Authentication & Access Control",
+          icon: <ShieldCheck size={20} className="text-emerald-400" />,
+          description:
+            "Implemented JWT authentication and role-based access control to secure internal dashboards and APIs.",
+          tech: ["Node.js", "JWT", "RBAC"],
+          impact: "Secured internal tools",
+        },
+        {
+          title: "Database Optimization",
+          icon: <Database size={20} className="text-purple-400" />,
+          description:
+            "Optimized MySQL queries and added indexing for audit and transaction data, improving query performance by 25%.",
+          tech: ["MySQL", "Indexing", "Query Optimization"],
+          impact: "25% faster queries",
+        },
+      ],
   },
   {
     company: "Celebal Technologies",

@@ -17,11 +17,11 @@ import {
 const projects = [
   {
     title: "Enterprise E-Commerce Platform",
-    category: "Full Stack / Enterprise",
+    category: "Full Stack / Production",
     description:
-      "A comprehensive e-commerce system with a layered Spring Boot architecture, handling product catalogs, cart management, and secure checkouts.",
-    tech: ["Java", "Spring Boot", "React", "MySQL", "JPA"],
-    impact: "Supports 1,000+ products with optimized JPA indexing.",
+      "Full-stack e-commerce platform with product catalog, cart, checkout, and admin dashboard with role-based access control.",
+    tech: ["React", "Redux", "Java", "Spring Boot", "MySQL", "JWT"],
+    impact: "Supports 1,000+ products with optimized API pagination.",
     icon: <ShoppingCart className="text-blue-400" size={22} />,
     status: "Production",
     liveLink: undefined,
@@ -34,8 +34,8 @@ const projects = [
     title: "Used-Car Lead Management",
     category: "Full Stack / Production System",
     description:
-      "A real-world dealership platform that digitized the lead intake process, replacing manual WhatsApp workflows with structured data capture.",
-    tech: ["Java", "React","Spring Boot" ],
+      "Dealership platform that digitized lead intake, replacing WhatsApp-based inquiries with structured submissions and dashboard tracking.",
+    tech: ["React", "Node.js", "Express", "MySQL", "REST APIs"],
     impact: "100% digital lead capture for car-selling requests.",
     icon: <Car className="text-emerald-400" size={22} />,
     status: "Live",
@@ -45,9 +45,9 @@ const projects = [
     title: "AI Article Summarizer",
     category: "AI / Frontend",
     description:
-      "High-performance summarization tool utilizing GPT-4. Features Redux-based request lifecycle management for seamless user feedback.",
-    tech: ["GPT-4 API", "React", "Redux Toolkit"],
-    impact: "Drastically reduced reading time for long-form content.",
+      "AI-powered summarization tool with Redux-based request lifecycle and optimized UI feedback handling.",
+    tech: ["React", "Redux Toolkit", "GPT API"],
+    impact: "Reduced reading time for long-form content.",
     icon: <Zap className="text-yellow-400" size={22} />,
     status: "Live",
     liveLink: "https://lighthearted-maamoul-73995f.netlify.app/",
@@ -56,9 +56,9 @@ const projects = [
     title: "Sanitaryware Brand Platform",
     category: "Freelance Client",
     description:
-      "Modern, high-conversion business website built with Next.js, focusing on performance, SEO, and responsive architectural detail.",
-    tech: ["React.js", "Redux", "Tailwind CSS", "Framer Motion"],
-    impact: "Modernized digital presence for hardware distribution.",
+      "Modern business website focused on performance, responsive UI, and smooth animations for product showcasing.",
+    tech: ["Next.js", "React", "Tailwind", "Framer Motion"],
+    impact: "Improved digital presence for hardware distribution.",
     icon: <Layout className="text-purple-400" size={22} />,
     status: "WIP",
     liveLink: "https://m-co-qj1f.vercel.app/",
@@ -67,9 +67,9 @@ const projects = [
     title: "Kanban Task Manager",
     category: "Productivity Tool",
     description:
-      "Complex state-driven application with drag-and-drop mechanics and Firebase authentication for secure task tracking.",
-    tech: ["Firebase Auth", "Firestore", "React-DnD"],
-    impact: "Real-time sync across devices with CRUD persistence.",
+      "Drag-and-drop task manager with real-time sync, authentication, and complex frontend state handling.",
+    tech: ["React", "Firebase Auth", "Firestore", "DnD"],
+    impact: "Real-time task sync with CRUD persistence.",
     icon: <Layers className="text-orange-400" size={22} />,
     status: "WIP",
     liveLink: "https://illustrious-kelpie-eea3b8.netlify.app/",
@@ -78,9 +78,9 @@ const projects = [
     title: "Weather Intelligence Dashboard",
     category: "Data Visualization",
     description:
-      "Real-time weather monitoring system that fetches and visualizes multi-metric forecast data from global APIs.",
-    tech: ["OpenWeather API", "React", "Charts.js"],
-    impact: "Data-driven UI rendering with dynamic city lookup.",
+      "Real-time weather dashboard with dynamic city search and multi-metric visualization.",
+    tech: ["React", "OpenWeather API", "Charts.js"],
+    impact: "Dynamic UI rendering with live weather updates.",
     icon: <CloudSun className="text-cyan-400" size={22} />,
     status: "Live",
     liveLink: "https://tangerine-youtiao-d6677d.netlify.app/",
@@ -121,11 +121,10 @@ const Projects = () => {
                   {project.icon}
                 </div>
                 <span
-                  className={`text-[10px] font-mono font-bold px-2 py-1 rounded-full border ${
-                    project.status === "WIP"
+                  className={`text-[10px] font-mono font-bold px-2 py-1 rounded-full border ${project.status === "WIP"
                       ? "text-yellow-500 border-yellow-500/20 bg-yellow-500/5"
                       : "text-blue-400 border-blue-400/20 bg-blue-400/5"
-                  }`}
+                    }`}
                 >
                   {project.status}
                 </span>

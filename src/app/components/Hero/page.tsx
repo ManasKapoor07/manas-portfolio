@@ -74,7 +74,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="/Manas-kapoor_SDE.pdf"
+                href="/Manas_kapoor.pdf"
                 download
                 className="flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white px-6 py-3 rounded-xl font-semibold border border-white/10 transition"
               >
@@ -124,6 +124,7 @@ const Hero = () => {
                   <TechPill name="Next.js" />
                   <TechPill name="TypeScript" />
                   <TechPill name="Tailwind" />
+                  <TechPill name="Redux" />
                 </div>
               </div>
 
@@ -136,10 +137,11 @@ const Hero = () => {
                   </h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <TechPill name="Java" />
-                  <TechPill name="Spring Boot" />
-                  <TechPill name="Spring Security" />
+                  <TechPill name="Node.js" />
+                  <TechPill name="Express.js" />
                   <TechPill name="REST APIs" />
+                  <TechPill name="Middleware" />
+                  <TechPill name="Java" />
                 </div>
               </div>
 
@@ -153,7 +155,7 @@ const Hero = () => {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <TechPill name="MySQL" />
-                  <TechPill name="JPA / Hibernate" />
+                  <TechPill name="MongoDB" />
                   <TechPill name="JWT" />
                   <TechPill name="WebSockets" />
                 </div>
